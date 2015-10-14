@@ -1,16 +1,14 @@
 /* CPSC 463, Fall 2015 - Prof. Greenbaum
  * Team: Quality Assured
  * Members: Phillip Stewart, Timothy Ater, Kenneth Gunderson
- * Last date modified: 26 Sep 2015
+ * Last date modified: 01 Oct 2015
  */
 
 /* Unit under test:
- *   Command.java
+ *   Null_Object_Exception_Exception.java
  * 
  * Prerequisites:
- *   Prior to testing, perform tests on the following units:
- *     - Null_Unit_ID_Exception
- *     - asdf
+ *     - None
  *   Data required:
  *     - None
  *   Equipment required:
@@ -18,53 +16,61 @@
  */
 
 
-/* Test case 01:
- *  Command(Integer, String) constructor test - Normal conditions
+/* Test case B-01:
+ *  Null_Object_Exception_Exception construction with no arguments
  *  Description:
- *    Umm, call the constructor with a Integer(1, 2, or 3) and a String(ID)
+ *    Throw a new Null_Object_Exception_Exception with no arguments.
  *  Expected result:
- *    A valid Command instance
- *    No exceptions expected
+ *    A Null_Object_Exception_Exception should be thrown.
  */
 
-
-/* Test case 02:
- *  Command(Integer, String) constructor test - Invalid Integer Initial_Priority
+/* Test case B-02:
+ *  Null_Object_Exception_Exception construction with empty string literal
  *  Description:
- *    Umm, call the constructor with a Integer( greater than valid input... ) and a String(ID)
+ *    Throw a new Null_Object_Exception_Exception given an empty string literal.
  *  Expected result:
- *    Some exception...
+ *    A Null_Object_Exception_Exception should be thrown.
  */
 
-
-/* Test case 03:
- *  Execute() - Normal conditions.
+/* Test case B-03:
+ *  Null_Object_Exception_Exception construction with non-empty string literal
  *  Description:
- *    Create a valid Command instance and call Execute() on it.
+ *    Throw a new Null_Object_Exception_Exception given a non-empty string literal.
  *  Expected result:
- *    Command is executed...
+ *    A Null_Object_Exception_Exception should be thrown.
  */
 
+/* Test case B-04:
+ *  Null_Object_Exception_Exception construction with empty String
+ *  Description:
+ *    Throw a new Null_Object_Exception_Exception given an empty String object
+ *  Expected result:
+ *    A Null_Object_Exception_Exception should be thrown.
+ */
 
+/* Test case B-05:
+ *  Null_Object_Exception_Exception construction with non-empty String
+ *  Description:
+ *    Throw a new Null_Object_Exception_Exception given a non-empty String object.
+ *  Expected result:
+ *    A Null_Object_Exception_Exception should be thrown.
+ */
 
-// ORIGINAL CODE FOR UNIT IS INCLUDED BELOW FOR QUICK REFERENCE.
-// IT HAS BEEN STRIPPED OF EXTRANEOUS COMMENTS AND FORMATTED FOR CLARITY.
-// ENSURE THIS HAS BEEN DELETED BEFORE SUBMITTING ASSIGNMENT.
+/* Test case B-06:
+ *  Null_Object_Exception_Exception construction with two floats
+ *  Description:
+ *    Throw a new Null_Object_Exception_Exception given two floating point values.
+ *    -The two floating point values represent lattitude and longitude.
+ *  Expected result:
+ *    A Null_Object_Exception_Exception should be thrown.
+ */
 
+/* Test case B-07:
+ *  Null_Object_Exception_Exception construction with two integers
+ *  Description:
+ *    Throw a new Null_Object_Exception_Exception given two integer values.
+ *    -The two values represent lattitude and longitude.
+ *  Expected result:
+ *    A Null_Object_Exception_Exception should be thrown. //TODO: type casts valid here??
+ */
 
-public class Null_Object_Exception extends RuntimeException {
-    public Null_Object_Exception() {
-    }
-
-    public Null_Object_Exception(String msg) {
-        super(msg);
-    }
-    
-    /**
-     * Constructs an instance of Null_Object_Exception with a message
-     * showing the erroneous values
-     * */
-    public Null_Object_Exception (Float Latitude, Float Longitude) {
-        super ("Location " + Latitude + ", " + Longitude + "is not valid");
-    }
-}

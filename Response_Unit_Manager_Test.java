@@ -1,16 +1,19 @@
 /* CPSC 463, Fall 2015 - Prof. Greenbaum
  * Team: Quality Assured
  * Members: Phillip Stewart, Timothy Ater, Kenneth Gunderson
- * Last date modified: 26 Sep 2015
+ * Last date modified: 05 Oct 2015
  */
 
 /* Unit under test:
- *   Command.java
+ *   Response_Unit_Manager.java
  * 
  * Prerequisites:
  *   Prior to testing, perform tests on the following units:
  *     - Null_Unit_ID_Exception
- *     - asdf
+ *     - Null_Object_Exception
+ *     - Duplicate_Item_Exception
+ *     - Location
+ *     - Response_Unit
  *   Data required:
  *     - None
  *   Equipment required:
@@ -18,33 +21,111 @@
  */
 
 
-/* Test case 01:
- *  Command(Integer, String) constructor test - Normal conditions
+/* Test case F-01:
+ *  Attempt construction
  *  Description:
- *    Umm, call the constructor with a Integer(1, 2, or 3) and a String(ID)
+ *    Attempt to create an instance of Response_Unit_Manager
  *  Expected result:
- *    A valid Command instance
- *    No exceptions expected
+ *    TODO: expect an error? something like "not implemented"
+ */
+
+/* Test case F-01:
+ *  Add_Response_Unit with valid input
+ *  Description:
+ *    Call Add_Response_Unit with a valid non-duplicate Response_Unit
+ *  Expected result:
+ *    Response_Unit should be successfully added to Response_Unit_DB.
+ */
+
+/* Test case F-01:
+ *  Add_Response_Unit multiple calls
+ *  Description:
+ *    Call Add_Response_Unit with MANY valid Response_Units
+ *  Expected result:
+ *    All Response_Units should be successfully added to Response_Unit_DB.
+ */
+
+/* Test case F-01:
+ *  Add_Response_Unit with null unit
+ *  Description:
+ *    Call Add_Response_Unit with a null Response_Unit
+ *  Expected result:
+ *    Null_Object_Exception expected
+ */
+
+/* Test case F-01:
+ *  Add_Response_Unit with duplicate unit
+ *  Description:
+ *    Call Add_Response_Unit with a Response_Unit with ID already in Response_Unit_DB
+ *  Expected result:
+ *    Duplicate_Item_Exception expected
  */
 
 
-/* Test case 02:
- *  Command(Integer, String) constructor test - Invalid Integer Initial_Priority
+//...
+
+/* Test case F-01:
+ *  Response_Unit_Named with existing Response_Unit Unit_ID
  *  Description:
- *    Umm, call the constructor with a Integer( greater than valid input... ) and a String(ID)
+ *    Add a valid Response_Unit to the Response_Unit_DB,
+ *    Then call Response_Unit_Named to retrieve it.
  *  Expected result:
- *    Some exception...
+ *    Named Response_Unit should be successfully returned.
+ */
+
+/* Test case F-01:
+ *  Response_Unit_Named with non-existing Response_Unit
+ *  Description:
+ *    Call Response_Unit_Named giving a Response_Unit not in the Response_Unit_DB
+ *  Expected result:
+ *    null returned.
+ */
+
+/* Test case F-01:
+ *  Response_Unit_Named with null Response_Unit
+ *  Description:
+ *    Call Response_Unit_Named giving a null String ID
+ *  Expected result:
+ *    TODO: Not sure what should be returned...
+ */
+
+/* Test case F-01:
+ *  Response_Unit_Named with empty String
+ *  Description:
+ *    Call Response_Unit_Named giving an empty String
+ *  Expected result:
+ *    TODO: Not sure what should be returned...
+ */
+
+/* Test case F-01:
+ *  Response_Unit_Named with empty string literal
+ *  Description:
+ *    Call Response_Unit_Named giving an empty string literal
+ *  Expected result:
+ *    TODO: Not sure what should be returned...
  */
 
 
-/* Test case 03:
- *  Execute() - Normal conditions.
+
+//Response_Unit_Exists
+/* Test case F-01:
+ *  Response_Unit_Exists with existing Response_Unit Unit_ID
  *  Description:
- *    Create a valid Command instance and call Execute() on it.
+ *    Add a valid Response_Unit to the Response_Unit_DB,
+ *    Then call Response_Unit_Exists to see if it exists.
  *  Expected result:
- *    Command is executed...
+ *    true
  */
 
+/* Test case F-01:
+ *  Response_Unit_Exists with non-existing Response_Unit Unit_ID
+ *  Description:
+ *    Call Response_Unit_Exists giving a Unit_ID not in Response_Unit_DB.
+ *  Expected result:
+ *    false
+ */
+
+//null string, empty string, empty string literal..
 
 
 // ORIGINAL CODE FOR UNIT IS INCLUDED BELOW FOR QUICK REFERENCE.

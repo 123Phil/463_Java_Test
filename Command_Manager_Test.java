@@ -1,49 +1,66 @@
 /* CPSC 463, Fall 2015 - Prof. Greenbaum
  * Team: Quality Assured
  * Members: Phillip Stewart, Timothy Ater, Kenneth Gunderson
- * Last date modified: 26 Sep 2015
+ * Last date modified: 13 Oct 2015
  */
 
 /* Unit under test:
- *   Command.java
+ *   Command_Manager.java
  * 
  * Prerequisites:
  *   Prior to testing, perform tests on the following units:
  *     - Null_Unit_ID_Exception
- *     - asdf
+ *     - Null_Object_Exception
+ *     - Duplicate_Item_Exception
+ *     - Location
+ *     - Response_Unit
+ *     - Response_Unit_Manager
+ *     - Command
+ *     - Toggle_Emergency_Command
+ *     - Send_Message_To_Operator_Command
+ *     - Set_Unit_Location_Command
+ *     - Set_Unit_Status_Command
+ *     - Command_Comparator
  *   Data required:
  *     - None
  *   Equipment required:
  *     - None
+ *   Note:
+ *     - A good portion of these tests are designed to test the abstract parent
+ *       Command class, and so some tests defined here are repeated in the fellow
+ *       classes which extend Command.
  */
 
 
 /* Test case 01:
- *  Command(Integer, String) constructor test - Normal conditions
+ *  Constructor - Normal conditions
  *  Description:
- *    Umm, call the constructor with a Integer(1, 2, or 3) and a String(ID)
+ *    Call the constructor... but there isn't one...
  *  Expected result:
- *    A valid Command instance
- *    No exceptions expected
+ *    ??
  */
 
 
-/* Test case 02:
- *  Command(Integer, String) constructor test - Invalid Integer Initial_Priority
- *  Description:
- *    Umm, call the constructor with a Integer( greater than valid input... ) and a String(ID)
- *  Expected result:
- *    Some exception...
- */
+//Queue empty?
 
 
-/* Test case 03:
- *  Execute() - Normal conditions.
+//enqueue various commands...
+
+
+//verify priority...
+
+
+
+//compare all combinations of commands...
+/* Test case :
+ *  Is_Higher_Priority_Than given equal priority commands
  *  Description:
- *    Create a valid Command instance and call Execute() on it.
+ *    Create two Toggle_Emergency_Commands
+ *    Call Is_Higher_Priority_Than
  *  Expected result:
- *    Command is executed...
+ *    false
  */
+
 
 
 

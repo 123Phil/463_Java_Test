@@ -1,16 +1,15 @@
 /* CPSC 463, Fall 2015 - Prof. Greenbaum
  * Team: Quality Assured
  * Members: Phillip Stewart, Timothy Ater, Kenneth Gunderson
- * Last date modified: 26 Sep 2015
+ * Last date modified: 04 Oct 2015
  */
 
 /* Unit under test:
- *   Command.java
+ *   Command_Comparator.java
  * 
  * Prerequisites:
  *   Prior to testing, perform tests on the following units:
- *     - Null_Unit_ID_Exception
- *     - asdf
+ *     - Command.java (and its prereqs)
  *   Data required:
  *     - None
  *   Equipment required:
@@ -18,51 +17,97 @@
  */
 
 
-/* Test case 01:
- *  Command(Integer, String) constructor test - Normal conditions
+//TODO: can the Comparator be constructed??
+
+/* Test case ?:
+ *  Command_Comparator constructor test - Normal conditions
  *  Description:
- *    Umm, call the constructor with a Integer(1, 2, or 3) and a String(ID)
+ *    Call the constructor with ...
  *  Expected result:
  *    A valid Command instance
  *    No exceptions expected
  */
 
-
-/* Test case 02:
- *  Command(Integer, String) constructor test - Invalid Integer Initial_Priority
+/* Test case ?:
+ *  Command_Comparator constructor test - abnormal conditions
  *  Description:
- *    Umm, call the constructor with a Integer( greater than valid input... ) and a String(ID)
+ *    Umm, call the constructor with ...
  *  Expected result:
- *    Some exception...
+ *    Exception
  */
 
-
-/* Test case 03:
- *  Execute() - Normal conditions.
+/* Test case ?:
+ *  Command.compare with equal priorities
  *  Description:
- *    Create a valid Command instance and call Execute() on it.
+ *    Test comparator with Command1 priority == Command2 priority
  *  Expected result:
- *    Command is executed...
+ *    compare returns 0
+ *    No exceptions expected
+ */
+
+/* Test case ?:
+ *  Command.compare with priority 1 > priority 2
+ *  Description:
+ *    Test comparator with Command1 priority > Command2 priority
+ *  Expected result:
+ *    compare returns >0
+ *    No exceptions expected
+ */
+
+/* Test case ?:
+ *  Command.compare with priority 1 < priority 2
+ *  Description:
+ *    Test comparator with Command1 priority < Command2 priority
+ *  Expected result:
+ *    compare returns <0
+ *    No exceptions expected
+ */
+
+/* Test case ?:
+ *  Command.compare with null Command objects
+ *  Description:
+ *    Test comparator with:
+ *    -Command1 null
+ *    -Command2 null
+ *    -Command1 null and Command2 null
+ *  Expected result:
+ *    Any null comparison should throw a Null_Object_ID_Exception
+ */
+
+/* Test case ?:
+ *  Command.compare with priority 1 == priority 2 with negative values
+ *  Description:
+ *    Test comparator with negative values
+ *  Expected result:
+ *    Do we allow values outside the priorities {0, 1, 2} ??
+ *    if so, compare returns 0
+ */
+
+/* Test case ?:
+ *  Command.compare with priority 1 < priority 2 with negative values
+ *  Description:
+ *    Test comparator with negative values
+ *  Expected result:
+ *    Do we allow values outside the priorities {0, 1, 2} ??
+ *    if so, compare returns <0
+ */
+
+/* Test case ?:
+ *  Command.compare with priority 1 > priority 2 with negative values
+ *  Description:
+ *    Test comparator with negative values
+ *  Expected result:
+ *    Do we allow values outside the priorities {0, 1, 2} ??
+ *    if so, compare returns >0
+ */
+
+/* Test case ?:
+ *  Command.compare with priority 1 == priority 2 == MAX_INT
+ *  Description:
+ *    Test comparator with MAX_INT
+ *  Expected result:
+ *    Do we allow values outside the priorities {0, 1, 2} ??
+ *    if so, compare returns 0
  */
 
 
-
-// ORIGINAL CODE FOR UNIT IS INCLUDED BELOW FOR QUICK REFERENCE.
-// IT HAS BEEN STRIPPED OF EXTRANEOUS COMMENTS AND FORMATTED FOR CLARITY.
-// ENSURE THIS HAS BEEN DELETED BEFORE SUBMITTING ASSIGNMENT.
-
-/**
- * This class implements a comparator for the Command type
- */
-public class Command_Comparator implements Comparator <Command>
-{
-    /**
-     * positive if Command1's greater 
-     * negative if Command2's greater
-     * zero if equal
-     */
-    @Override
-    public int compare (Command Command1, Command Command2) {
-        return Command1.Priority() - Command2.Priority ();
-    }//end compare
-} // end Command_Comparator

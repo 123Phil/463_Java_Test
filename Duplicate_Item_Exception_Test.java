@@ -1,16 +1,14 @@
 /* CPSC 463, Fall 2015 - Prof. Greenbaum
  * Team: Quality Assured
  * Members: Phillip Stewart, Timothy Ater, Kenneth Gunderson
- * Last date modified: 26 Sep 2015
+ * Last date modified: 01 Oct 2015
  */
 
 /* Unit under test:
- *   Command.java
+ *   Duplicate_Item_Exception.java
  * 
  * Prerequisites:
- *   Prior to testing, perform tests on the following units:
- *     - Null_Unit_ID_Exception
- *     - asdf
+ *     - None
  *   Data required:
  *     - None
  *   Equipment required:
@@ -18,44 +16,43 @@
  */
 
 
-/* Test case 01:
- *  Command(Integer, String) constructor test - Normal conditions
+/* Test case A-01:
+ *  Duplicate_Item_Exception construction with no arguments
  *  Description:
- *    Umm, call the constructor with a Integer(1, 2, or 3) and a String(ID)
+ *    Throw a new Duplicate_Item_Exception with no arguments.
  *  Expected result:
- *    A valid Command instance
- *    No exceptions expected
+ *    A Duplicate_Item_Exception should be thrown.
  */
 
-
-/* Test case 02:
- *  Command(Integer, String) constructor test - Invalid Integer Initial_Priority
+/* Test case A-02:
+ *  Duplicate_Item_Exception construction with empty string literal
  *  Description:
- *    Umm, call the constructor with a Integer( greater than valid input... ) and a String(ID)
+ *    Throw a new Duplicate_Item_Exception given an empty string literal.
  *  Expected result:
- *    Some exception...
+ *    A Duplicate_Item_Exception should be thrown.
  */
 
-
-/* Test case 03:
- *  Execute() - Normal conditions.
+/* Test case A-03:
+ *  Duplicate_Item_Exception construction with non-empty string literal
  *  Description:
- *    Create a valid Command instance and call Execute() on it.
+ *    Throw a new Duplicate_Item_Exception given a non-empty string literal.
  *  Expected result:
- *    Command is executed...
+ *    A Duplicate_Item_Exception should be thrown.
  */
 
+/* Test case A-04:
+ *  Duplicate_Item_Exception construction with empty String
+ *  Description:
+ *    Throw a new Duplicate_Item_Exception given an empty String object
+ *  Expected result:
+ *    A Duplicate_Item_Exception should be thrown.
+ */
 
+/* Test case A-05:
+ *  Duplicate_Item_Exception construction with non-empty String
+ *  Description:
+ *    Throw a new Duplicate_Item_Exception given a non-empty String object.
+ *  Expected result:
+ *    A Duplicate_Item_Exception should be thrown.
+ */
 
-// ORIGINAL CODE FOR UNIT IS INCLUDED BELOW FOR QUICK REFERENCE.
-// IT HAS BEEN STRIPPED OF EXTRANEOUS COMMENTS AND FORMATTED FOR CLARITY.
-// ENSURE THIS HAS BEEN DELETED BEFORE SUBMITTING ASSIGNMENT.
-
-public class Duplicate_Item_Exception extends Exception {
-    public Duplicate_Item_Exception() {
-    }
-
-    public Duplicate_Item_Exception(String msg) {
-        super(msg);
-    }
-}
