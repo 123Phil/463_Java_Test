@@ -30,8 +30,8 @@
 /* Test case H-01:
  *  Constructor, Normal conditions (String)
  *  Description:
+ *    Add Unit_ID to Response_Unit_DB
  *    Call the constructor with a valid ID String
- *    TODO: does the Unit_ID need to exist in Response_Unit_DB first?
  *  Expected result:
  *    A valid Toggle_Emergency_Command object is instantiated with priority == 1
  */
@@ -39,6 +39,7 @@
 /* Test case H-02:
  *  Constructor, Normal conditions (string literal)
  *  Description:
+ *    Add Unit_ID to Response_Unit_DB
  *    Call the constructor with a valid ID string literal
  *  Expected result:
  *    A valid Toggle_Emergency_Command object is instantiated with priority == 1
@@ -130,6 +131,7 @@
 /* Test case H-12:
  *  Unit_ID accessors, normal path
  *  Description:
+ *    Add Unit_IDs to Response_Unit_DB
  *    Create a Toggle_Emergency_Command with valid parameters
  *    Use Unit_ID() accessor to check value.
  *    Set a new Unit_ID
@@ -163,5 +165,15 @@
  *    Attempt to set Unit_ID to empty string literal.
  *  Expected result:
  *    Null_Unit_ID_Exception
+ */
+
+/* Test case H-16:
+ *  Unit_ID setter, invalid Unit_ID
+ *  Description:
+ *    Add Unit_ID to Response_Unit_DB
+ *    Create a Toggle_Emergency_Command with valid parameters
+ *    Attempt to set Unit_ID to a Unit_ID that does not exist in Response_Unit_DB.
+ *  Expected result:
+ *    Null_Unit_ID_Exception ??
  */
 

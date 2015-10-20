@@ -32,33 +32,80 @@
  */
 
 
-/* Test case 01:
+/* Test case M-01:
  *  Constructor - Normal conditions
  *  Description:
- *    Call the constructor... but there isn't one...
+ *    Call the constructor... but there isn't one... (implicit)
  *  Expected result:
  *    ??
  */
 
-
-//Queue empty?
-
-
-//enqueue various commands...
-
-
-//verify priority...
-
-
-
-//compare all combinations of commands...
-/* Test case :
- *  Is_Higher_Priority_Than given equal priority commands
+/* Test case M-02:
+ *  Next_Command with empty queue
  *  Description:
- *    Create two Toggle_Emergency_Commands
- *    Call Is_Higher_Priority_Than
+ *    Call Next_Command before enqueueing any commands.
  *  Expected result:
- *    false
+ *    null
+ */
+
+/* Test case M-03:
+ *  Next_Command with enqueued command
+ *  Description:
+ *    Enqueue a valid Command object
+ *    Call Next_Command
+ *  Expected result:
+ *    The enqueued command should be returned.
+ */
+
+/* Test case M-04:
+ *  Execute_Next_Command with empty queue
+ *  Description:
+ *    Call Execute_Next_Command before enqueueing any commands.
+ *  Expected result:
+ *    Null_Unit_ID_Exception <- should really be Null_Obj..
+ */
+
+/* Test case M-04:
+ *  Execute_Next_Command with 
+ *  Description:
+ *    Call 
+ *  Expected result:
+ *    
+ */
+
+/* Test case M-04:
+ *  Queue_Empty with 
+ *  Description:
+ *    Call 
+ *  Expected result:
+ *    
+ */
+
+/* Test case M-04:
+ *  Queue_Empty with 
+ *  Description:
+ *    Call 
+ *  Expected result:
+ *    
+ */
+
+
+/* Test case M-05:
+ *  Priority test with 1 each type Command
+ *  Description:
+ *    Enqueue
+ *    Call Next_Command before enqueueing any commands.
+ *  Expected result:
+ *    null
+ */
+
+/* Test case M-05:
+ *  Priority test with 1 each type Command
+ *  Description:
+ *    Enqueue
+ *    Call Next_Command before enqueueing any commands.
+ *  Expected result:
+ *    null
  */
 
 
