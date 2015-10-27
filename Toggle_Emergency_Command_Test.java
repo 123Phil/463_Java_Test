@@ -45,13 +45,12 @@
  *    A valid Toggle_Emergency_Command object is instantiated with priority == 1
  */
 
-//TODO: should empty string cause Null_Unit_ID_Exception ??
 /* Test case H-03:
  *  Constructor, null Unit_ID
  *  Description:
  *    Call the constructor with null String
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception
  */
 
 /* Test case H-04:
@@ -59,7 +58,7 @@
  *  Description:
  *    Call the constructor with empty String
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception
  */
 
 /* Test case H-05:
@@ -67,17 +66,15 @@
  *  Description:
  *    Call the constructor with empty string literal
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception
  */
 
-//TODO: can we add a command for a non-existent unit ID?
 /* Test case H-06:
  *  Constructor, Unit_ID NOT in Response_Unit_DB
  *  Description:
  *    Call the constructor with a Unit_ID that does not exist in the DB
  *  Expected result:
- *    Null_Unit_ID_Exception ??
- *    -should we allow construction and throw exception on execution??
+ *    Null_Unit_ID_Exception
  */
 
 /* Test case H-07:
@@ -116,7 +113,7 @@
  *    Create a Toggle_Emergency_Command with valid parameters
  *    Attempt to set Priority to null.
  *  Expected result:
- *    Null_Unit_ID_Exception ?? //TODO
+ *    Null_Unit_ID_Exception
  */
 
 /* Test case H-11:
@@ -125,7 +122,7 @@
  *    Create a Toggle_Emergency_Command with valid parameters
  *    Attempt to set Priority to negative, INT_MAX, or other values outside of valid range.
  *  Expected result:
- *    Null_Unit_ID_Exception ?? //TODO
+ *    Null_Unit_ID_Exception
  */
 
 /* Test case H-12:
@@ -174,6 +171,6 @@
  *    Create a Toggle_Emergency_Command with valid parameters
  *    Attempt to set Unit_ID to a Unit_ID that does not exist in Response_Unit_DB.
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception
  */
 

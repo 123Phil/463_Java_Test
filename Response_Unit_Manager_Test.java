@@ -84,7 +84,7 @@
  *  Description:
  *    Call Response_Unit_Named giving a null String ID
  *  Expected result:
- *    TODO: Not sure what should be returned...
+ *    Null_Unit_ID_Exception
  */
 
 /* Test case F-09:
@@ -92,7 +92,7 @@
  *  Description:
  *    Call Response_Unit_Named giving an empty String
  *  Expected result:
- *    TODO: Not sure what should be returned...
+ *    Null_Unit_ID_Exception
  */
 
 /* Test case F-10:
@@ -100,7 +100,7 @@
  *  Description:
  *    Call Response_Unit_Named giving an empty string literal
  *  Expected result:
- *    TODO: Not sure what should be returned...
+ *    Null_Unit_ID_Exception
  */
 
 /* Test case F-11:

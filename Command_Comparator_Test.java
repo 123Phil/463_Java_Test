@@ -18,6 +18,7 @@
 
 
 //TODO: can the Comparator be constructed??
+//TODO: number these
 
 /* Test case ?:
  *  Command_Comparator constructor test - Normal conditions
@@ -74,6 +75,7 @@
  *    Any null comparison should throw a Null_Object_ID_Exception
  */
 
+//TODO: result on these 4 cases:
 /* Test case ?:
  *  Command.compare with priority 1 == priority 2 with negative values
  *  Description:

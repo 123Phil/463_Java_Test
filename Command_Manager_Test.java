@@ -31,7 +31,7 @@
  *       classes which extend Command.
  */
 
-
+//TODO: ??
 /* Test case M-01:
  *  Constructor - Normal conditions
  *  Description:
@@ -78,7 +78,7 @@
  *  Description:
  *    Call Execute_Next_Command before enqueueing any commands.
  *  Expected result:
- *    Null_Unit_ID_Exception <- should really be Null_Obj..
+ *    Null_Object_Exception
  */
 
 /* Test case M-07:
@@ -182,7 +182,7 @@
  */
 
 
-
+//TODO:
 /* Test case M-??:
  *  Priority test with same priority?
  *  Description:
@@ -191,7 +191,7 @@
  *    
  */
 
-
+//TODO:
 //We should test with threads, since the project description mentions threads.
 //The problem is how do we verify across threads that this is working??
 //And we should be able to break it. PriorityQueue is not thread-safe.

@@ -70,13 +70,12 @@
  *    Null_Unit_ID_Exception should throw an error message.
  */
 
-//TODO: Can the Operator_Message be null or empty?? - what's the exception?
 /* Test case :
  *  Constructor, null message
  *  Description:
  *    Call the constructor with null String for message
  *  Expected result:
- *    Null_Unit_ID_Exception should throw an error message.
+ *    Null_Object_Exception thrown.
  */
 
 /* Test case :
@@ -84,7 +83,7 @@
  *  Description:
  *    Call the constructor with empty String for message
  *  Expected result:
- *    Null_Unit_ID_Exception should throw an error message.
+ *    Null_Object_Exception thrown.
  */
 
 /* Test case :
@@ -92,7 +91,7 @@
  *  Description:
  *    Call the constructor with empty string literal for message
  *  Expected result:
- *    Null_Unit_ID_Exception should throw an error message.
+ *    Null_Object_Exception thrown.
  */
 
 /* Test case :
@@ -139,7 +138,7 @@
  *    Create a Send_Message_To_Operator_Command with valid parameters
  *    Attempt to set Priority to null.
  *  Expected result:
- *    Null_Unit_ID_Exception ?? //TODO
+ *    Null_Object_Exception
  */
 
 /* Test case :
@@ -148,7 +147,7 @@
  *    Create a Send_Message_To_Operator_Command with valid parameters
  *    Attempt to set Priority to negative, INT_MAX, or other values outside of valid range.
  *  Expected result:
- *    Null_Unit_ID_Exception ?? //TODO
+ *    Null_Object_Exception //TODO: error here, but what?
  */
 
 /* Test case :

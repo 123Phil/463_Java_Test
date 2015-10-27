@@ -132,6 +132,6 @@
  *  Description:
  *    Create a valid object and call Set_Status_Type giving an integer value.
  *  Expected result:
- *    An error should occur
+ *    An Enum error should occur
  */
 

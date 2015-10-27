@@ -67,14 +67,12 @@
  *    Null_Unit_ID_Exception message
  */
 
-//TODO: can we add a command for a non-existent unit ID?
 /* Test case :
  *  Constructor, Unit_ID NOT in Response_Unit_DB
  *  Description:
  *    Call the constructor with a Unit_ID that does not exist in the DB
  *  Expected result:
  *    Null_Object_ID_Exception message
- *    -should we allow construction and throw exception on execution??
  */
 
 /* Test case :
@@ -113,7 +111,7 @@
  *    Create a Set_Unit_Location_Command with valid parameters
  *    Attempt to set Priority to null.
  *  Expected result:
- *    Null_Unit_ID_Exception ?? //TODO
+ *    Null_Unit_ID_Exception
  */
 
 /* Test case :
@@ -163,33 +161,3 @@
  *    Null_Unit_ID_Exception
  */
 
-
-
-
-
-
-// ORIGINAL CODE FOR UNIT IS INCLUDED BELOW FOR QUICK REFERENCE.
-// IT HAS BEEN STRIPPED OF EXTRANEOUS COMMENTS AND FORMATTED FOR CLARITY.
-// ENSURE THIS HAS BEEN DELETED BEFORE SUBMITTING ASSIGNMENT.
-
-public class Set_Unit_Location_Command extends Command {
-    private Location New_Location;
-    
-    @Override
-    public void Execute () throws Null_Unit_ID_Exception {
-        Response_Unit Subject_Unit= Response_Unit_Manager.Response_Unit_Named(Unit_ID);
-        
-        if (Subject_Unit == null)
-            throw new Null_Unit_ID_Exception (Unit_ID);
-        else
-            Subject_Unit.Set_Location (New_Location);
-    } //end Execute
-    
-
-    //WTF??
-    public Set_Unit_Location_Command (String Unit_ID, Location Updated_Location){
-        super (2, Unit_ID);
-        New_Location = Updated_Location;
-    } //end Set_Unit_Location_Command
-    
-} //end Set_Unit_Location_Command

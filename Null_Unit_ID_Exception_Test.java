@@ -57,35 +57,35 @@
  */
 
 /* Test case C-06:
- *  Null_Unit_ID_Exception construction with positive int
+ *  Null_Unit_ID_Exception construction with an int
  *  Description:
- *    Test with a Unit ID
+ *    Throw a new Null_Unit_ID_Exception given an int
  *  Expected result:
  *    No exception should be thrown.
  */
 
 /* Test case C-07:
- *  Null_Unit_ID_Exception construction with empty int
+ *  Null_Unit_ID_Exception construction with negative int
  *  Description:
- *    Test with a Negative Unit ID
+ *    Throw a new Null_Unit_ID_Exception given negative int
  *  Expected result:
- *    Constructs an instance of Null_Unit_ID_Exception with the specified detail message.
+ *    No exception should be thrown.
  */
 
 /* Test case C-08:
- *  Null_Unit_ID_Exception construction with positive float or negatvie
+ *  Null_Unit_ID_Exception construction with float
  *  Description:
- *    Test with a float Unit ID
+ *    Test with a float msg
  *  Expected result:
- *    Constructs an instance of Null_Unit_ID_Exception with the specified detail message.
+ *    No exception should be thrown.
  */
 
 /* Test case C-09:
- *  Null_Unit_ID_Exception construction with various empty units like long, char, double, short, byte
+ *  Null_Unit_ID_Exception construction with Null Integer object
  *  Description:
- *    Test with various empty variable types
+ *    Test with various Null Integer
  *  Expected result:
- *    Constructs an instance of Null_Unit_ID_Exception with the specified detail message.
+ *    No exception should be thrown.
  */
 
 
