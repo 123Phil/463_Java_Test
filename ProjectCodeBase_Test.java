@@ -20,12 +20,26 @@
 /* Test case 01:
  *  Normal conditions
  *  Description:
- *    asdf
+ *    Execute main with normal data
  *  Expected result:
  *    No exceptions expected
  */
 
+/* Test case 02:
+ *  Normal conditions
+ *  Description:
+ *    Execute main with null data
+ *  Expected result:
+ *    Exceptions should be thrown
+ */
 
+/* Test case 03:
+ *  Normal conditions
+ *  Description:
+ *    Execute main with invalid data
+ *  Expected result:
+ *    Exceptions should be thrown
+ */
 
 
 

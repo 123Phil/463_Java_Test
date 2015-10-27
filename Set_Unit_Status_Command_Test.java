@@ -28,10 +28,9 @@
 
 
 /* Test case :
- *  Constructor, Normal conditions (String)
+ *  Constructor, Normal conditions (String), existing Unit_ID
  *  Description:
  *    Call the constructor with a valid ID String
- *    TODO: does the Unit_ID need to exist in Response_Unit_DB first?
  *  Expected result:
  *    A valid Set_Unit_Status_Command object is instantiated with priority == 1
  */

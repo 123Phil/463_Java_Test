@@ -28,10 +28,9 @@
 
 
 /* Test case :
- *  Constructor, Normal conditions (String)
+ *  Constructor, Normal conditions (String), existing Unit_ID
  *  Description:
  *    Call the constructor with a valid ID String
- *    TODO: does the Unit_ID need to exist in Response_Unit_DB first?
  *  Expected result:
  *    A valid Set_Unit_Location_Command object is instantiated with priority == 1
  */
@@ -44,13 +43,12 @@
  *    A valid Set_Unit_Location_Command object is instantiated with priority == 1
  */
 
-//TODO: should empty string cause Null_Unit_ID_Exception ??
 /* Test case :
  *  Constructor, null Unit_ID
  *  Description:
  *    Call the constructor with null String
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception message
  */
 
 /* Test case :
@@ -58,7 +56,7 @@
  *  Description:
  *    Call the constructor with empty String
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception message
  */
 
 /* Test case :
@@ -66,7 +64,7 @@
  *  Description:
  *    Call the constructor with empty string literal
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception message
  */
 
 //TODO: can we add a command for a non-existent unit ID?
@@ -75,7 +73,7 @@
  *  Description:
  *    Call the constructor with a Unit_ID that does not exist in the DB
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Object_ID_Exception message
  *    -should we allow construction and throw exception on execution??
  */
 

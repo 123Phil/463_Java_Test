@@ -46,13 +46,12 @@
  *    with priority == 3, and Operator_Message == message
  */
 
-//TODO: should empty string cause Null_Unit_ID_Exception ??
 /* Test case :
  *  Constructor, null Unit_ID
  *  Description:
  *    Call the constructor with null String for Unit_ID
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception should throw an error message.
  */
 
 /* Test case :
@@ -60,7 +59,7 @@
  *  Description:
  *    Call the constructor with empty String for Unit_ID
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception should throw an error message.
  */
 
 /* Test case :
@@ -68,7 +67,7 @@
  *  Description:
  *    Call the constructor with empty string literal for Unit_ID
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception should throw an error message.
  */
 
 //TODO: Can the Operator_Message be null or empty?? - what's the exception?
@@ -77,7 +76,7 @@
  *  Description:
  *    Call the constructor with null String for message
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception should throw an error message.
  */
 
 /* Test case :
@@ -85,7 +84,7 @@
  *  Description:
  *    Call the constructor with empty String for message
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception should throw an error message.
  */
 
 /* Test case :
@@ -93,17 +92,15 @@
  *  Description:
  *    Call the constructor with empty string literal for message
  *  Expected result:
- *    Null_Unit_ID_Exception ??
+ *    Null_Unit_ID_Exception should throw an error message.
  */
 
-//TODO: can we add a command for a non-existent unit ID?
 /* Test case :
  *  Constructor, Unit_ID NOT in Response_Unit_DB
  *  Description:
  *    Call the constructor with a Unit_ID that does not exist in the DB
  *  Expected result:
- *    Null_Unit_ID_Exception ??
- *    -should we allow construction and throw exception on execution??
+ *    Null_Object_Exception message.
  */
 
 /* Test case :

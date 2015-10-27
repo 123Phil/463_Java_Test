@@ -74,3 +74,10 @@
  *    A Null_Object_Exception_Exception should be thrown. //TODO: type casts valid here??
  */
 
+/* Test case B-08:
+ *  Null_Object_Exception_Exception construction with empty location object
+ *  Description:
+ *    Throw a new Null_Object_Exception_Exception given and empty location object
+ *  Expected result:
+ *    A Null_Object_Exception_Exception should be thrown.
+ */

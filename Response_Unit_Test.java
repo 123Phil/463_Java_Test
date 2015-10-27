@@ -45,7 +45,7 @@
  *    Construct a Response_Unit with an empty String
  *    -Normal parameters are (String, Location)
  *  Expected result:
- *    TODO: Not sure what is expected...
+ *    Null_Unit_Exception message
  */
 
 /* Test case E-04:
@@ -54,7 +54,7 @@
  *    Construct a Response_Unit with an empty string literal - ""
  *    -Normal parameters are (String, Location)
  *  Expected result:
- *    TODO: Not sure what is expected...
+ *    Null_Unit_Exception message
  */
 
 /* Test case E-05:
@@ -89,7 +89,7 @@
  *  Description:
  *    Create a valid object and call the Set_Location giving null.
  *  Expected result:
- *    TODO: should we expect Null_Object_Exception
+ *    Null_Object_Exception message
  */
 
 /* Test case E-09:
@@ -106,7 +106,7 @@
  *  Description:
  *    Create a valid object and call the Set_Emergency_Exists giving null.
  *  Expected result:
- *    TODO: should we expect an Error?
+ *    Null_Object_Exception message
  */
 
 /* Test case E-11:
@@ -124,7 +124,7 @@
  *  Description:
  *    Create a valid object and call Set_Status_Type giving null.
  *  Expected result:
- *    TODO: should we expect Null_Object_Exception
+ *    Null_Object_Exception message
  */
 
 /* Test case E-13:
@@ -132,6 +132,6 @@
  *  Description:
  *    Create a valid object and call Set_Status_Type giving an integer value.
  *  Expected result:
- *    TODO: should we expect Error?
+ *    An error should occur
  */
 
