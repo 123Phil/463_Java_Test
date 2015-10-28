@@ -1,7 +1,7 @@
 /* CPSC 463, Fall 2015 - Prof. Greenbaum
  * Team: Quality Assured
  * Members: Phillip Stewart, Timothy Ater, Kenneth Gunderson
- * Last date modified: 13 Oct 2015
+ * Last date modified: 25 Oct 2015
  */
 
 /* Unit under test:
@@ -31,13 +31,13 @@
  *       classes which extend Command.
  */
 
-//TODO: ??
+
 /* Test case M-01:
  *  Constructor - Normal conditions
  *  Description:
- *    Call the constructor... but there isn't one... (implicit)
+ *    Call the constructor (implicit constructor)
  *  Expected result:
- *    ??
+ *    A valid onstance of Command_Manager should be created
  */
 
 /* Test case M-02:
@@ -181,28 +181,36 @@
  *    Priority 1, then 2, then 3 returned in that order.
  */
 
-
-//TODO:
-/* Test case M-??:
- *  Priority test with same priority?
+/* Test case M-16:
+ *  Next_Command test with Thread
  *  Description:
- *    don't know if we need to test this...
+ *    Create a Thread to Enqueue 10 valid Toggle_Emergency_Command objects.
+ *    Call Next_Command in a loop.
+ *    Verify number of commands polled.
  *  Expected result:
- *    
+ *    All 10 commands should be retrieved.
  */
 
-//TODO:
-//We should test with threads, since the project description mentions threads.
-//The problem is how do we verify across threads that this is working??
-//And we should be able to break it. PriorityQueue is not thread-safe.
-
-/* Test case M-??:
- *  Priority test with multiple threads...
+/* Test case M-17:
+ *  Priority test with Thread
  *  Description:
- *    don't know...
+ *    Create a Thread to Enqueue 10 valid Toggle_Emergency_Command objects,
+ *      and then 10 valid Toggle_Emergency_Command objects.
+ *    Call Next_Command in a loop.
+ *    Verify commands polled.
  *  Expected result:
- *    Highest priority always returned first.
+ *    The 10 higher priority commands should be returned first,
+ *      then the 10 low priority commands.
  */
 
+/* Test case M-18:
+ *  Multiple access on PriorityQueue with Threads (stress test)
+ *  Description:
+ *    Create a Thread which calls Next_Command in a loop and counts commands.
+ *    Create 100 threads which each enqueue 100 commands.
+ *    Verify the number of commands polled.
+ *  Expected result:
+ *    All 10000 commands should be enqueued and retrieved without race conditions.
+ */
 
 

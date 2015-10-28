@@ -6,7 +6,6 @@
 
 /* Unit under test:
  *   Null_Unit_ID_Exception.java
- * 
  * Prerequisites:
  *     - None
  *   Data required:
@@ -61,7 +60,8 @@
  *  Description:
  *    Throw a new Null_Unit_ID_Exception given an int
  *  Expected result:
- *    No exception should be thrown.
+ *    No Null_Unit_ID_Exception exception should be thrown.
+ *    -Some error should occur
  */
 
 /* Test case C-07:
@@ -69,7 +69,8 @@
  *  Description:
  *    Throw a new Null_Unit_ID_Exception given negative int
  *  Expected result:
- *    No exception should be thrown.
+ *    No Null_Unit_ID_Exception exception should be thrown.
+ *    -Some error should occur
  */
 
 /* Test case C-08:
@@ -77,15 +78,17 @@
  *  Description:
  *    Test with a float msg
  *  Expected result:
- *    No exception should be thrown.
+ *    No Null_Unit_ID_Exception exception should be thrown.
+ *    -Some error should occur
  */
 
 /* Test case C-09:
  *  Null_Unit_ID_Exception construction with Null Integer object
  *  Description:
- *    Test with various Null Integer
+ *    Throw Null_Unit_ID_Exception with a Null Integer argument
  *  Expected result:
- *    No exception should be thrown.
+ *    No Null_Unit_ID_Exception exception should be thrown.
+ *    -Some error should occur
  */
 
 

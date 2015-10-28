@@ -27,7 +27,7 @@
  */
 
 
-/* Test case :
+/* Test case I-01:
  *  Constructor, Normal conditions (String), existing Unit_ID
  *  Description:
  *    Call the constructor with a valid ID String
@@ -35,7 +35,7 @@
  *    A valid Set_Unit_Status_Command object is instantiated with priority == 1
  */
 
-/* Test case :
+/* Test case I-02:
  *  Constructor, Normal conditions (string literal)
  *  Description:
  *    Call the constructor with a valid ID string literal
@@ -43,7 +43,7 @@
  *    A valid Set_Unit_Status_Command object is instantiated with priority == 1
  */
 
-/* Test case :
+/* Test case I-03:
  *  Constructor, null Unit_ID
  *  Description:
  *    Call the constructor with null String
@@ -51,7 +51,7 @@
  *    Null_Unit_ID_Exception
  */
 
-/* Test case :
+/* Test case I-04:
  *  Constructor, empty String Unit_ID
  *  Description:
  *    Call the constructor with empty String
@@ -59,7 +59,7 @@
  *    Null_Unit_ID_Exception
  */
 
-/* Test case :
+/* Test case I-05:
  *  Constructor, empty string literal Unit_ID
  *  Description:
  *    Call the constructor with empty string literal
@@ -67,7 +67,7 @@
  *    Null_Unit_ID_Exception
  */
 
-/* Test case :
+/* Test case I-06:
  *  Constructor, Unit_ID NOT in Response_Unit_DB
  *  Description:
  *    Call the constructor with a Unit_ID that does not exist in the DB
@@ -75,7 +75,7 @@
  *    Null_Unit_ID_Exception
  */
 
-/* Test case :
+/* Test case I-07:
  *  Execute command on Response_Unit in Response_Unit_DB
  *  Description:
  *    Add a unit to the Response_Unit_DB,
@@ -85,7 +85,7 @@
  *    Emergency_Exists should toggle on the named unit.
  */
 
-/* Test case :
+/* Test case I-08:
  *  Execute command on Response_Unit NOT in Response_Unit_DB
  *  Description:
  *    Create a Set_Unit_Status_Command with a Unit_ID not in Response_Unit_DB
@@ -94,7 +94,7 @@
  *    Null_Unit_ID_Exception
  */
 
-/* Test case :
+/* Test case I-09:
  *  Priority accessors, normal path
  *  Description:
  *    Create a Set_Unit_Status_Command with valid parameters
@@ -105,7 +105,7 @@
  *    Priority should update normally
  */
 
-/* Test case :
+/* Test case I-10:
  *  Priority accessors, null value
  *  Description:
  *    Create a Set_Unit_Status_Command with valid parameters
@@ -114,16 +114,16 @@
  *    Null_Object_Exception
  */
 
-/* Test case :
+/* Test case I-11:
  *  Priority accessors, invalid value
  *  Description:
  *    Create a Set_Unit_Status_Command with valid parameters
  *    Attempt to set Priority to negative, INT_MAX, or other values outside of valid range.
  *  Expected result:
- *    Null_Unit_ID_Exception //TODO: error here, but what kind?
+ *    Null_Unit_ID_Exception
  */
 
-/* Test case :
+/* Test case I-12:
  *  Unit_ID accessors, normal path
  *  Description:
  *    Create a Set_Unit_Status_Command with valid parameters
@@ -134,7 +134,7 @@
  *    Unit_ID should update normally
  */
 
-/* Test case :
+/* Test case I-13:
  *  Unit_ID accessors, null value
  *  Description:
  *    Create a Set_Unit_Status_Command with valid parameters
@@ -143,7 +143,7 @@
  *    Null_Unit_ID_Exception
  */
 
-/* Test case :
+/* Test case I-14:
  *  Unit_ID accessors, empty String
  *  Description:
  *    Create a Set_Unit_Status_Command with valid parameters
@@ -152,7 +152,7 @@
  *    Null_Unit_ID_Exception
  */
 
-/* Test case :
+/* Test case I-15:
  *  Unit_ID accessors, empty string literal
  *  Description:
  *    Create a Set_Unit_Status_Command with valid parameters

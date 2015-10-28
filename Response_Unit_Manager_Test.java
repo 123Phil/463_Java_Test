@@ -26,8 +26,8 @@
  *  Description:
  *    Attempt to create an instance of Response_Unit_Manager
  *  Expected result:
- *    TODO: expect an error? something like "not implemented"
- #    I'm guessing this class should be static...
+ *    Object should not be instantiated.
+ *    -All methods and variables are static
  */
 
 /* Test case F-02:

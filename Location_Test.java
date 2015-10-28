@@ -14,8 +14,6 @@
  *     - None
  *   Equipment required:
  *     - None
- *   Notes:
- *     - Getters tested indirectly through other test cases.
  */
 
 

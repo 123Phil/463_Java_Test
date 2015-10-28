@@ -6,7 +6,6 @@
 
 /* Unit under test:
  *   Null_Object_Exception.java
- * 
  * Prerequisites:
  *     - None
  *   Data required:

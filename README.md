@@ -29,4 +29,3 @@ $ git add *
 $ git commit -m "I changed ... files, wrote tests..."
 $ git push origin master
 ```
-Try to get started this weekend, and we can talk monday...
