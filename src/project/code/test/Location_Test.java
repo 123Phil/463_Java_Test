@@ -4,9 +4,12 @@
  * Last date modified: 10 Nov 2015
  */
 
-package project.code.base;
+package project.code.test;
 import static org.junit.Assert.*;
 import org.junit.Test;
+
+import project.code.base.Location;
+import project.code.base.Null_Object_Exception;
 
 
 /* Unit under test:
@@ -35,7 +38,7 @@ public class Location_Test {
 	 */
 	@Test
 	public void ConstructorNormalTest() {
-		Location loc = new Location(0.0, 0.0);
+		Location loc = new Location(0.0f, 0.0f);
 		assertNotNull(loc);
 	}
 
@@ -51,7 +54,7 @@ public class Location_Test {
 	 */
 	@Test
 	public void ConstructorBoundaryTest1() {
-		Location loc = new Location(-90.0, 0.0);
+		Location loc = new Location(-90.0f, 0.0f);
 		assertNotNull(loc);
 	}
 
@@ -66,7 +69,7 @@ public class Location_Test {
 	 */
 	@Test
 	public void ConstructorBoundaryTest2() {
-		Location loc = new Location(-90.0, 0.0);
+		Location loc = new Location(-90.0f, 0.0f);
 		assertNotNull(loc);
 	}
 
@@ -82,7 +85,7 @@ public class Location_Test {
 	 */
 	@Test
 	public void ConstructorBoundaryTest3() {
-		Location loc = new Location(0.0, -180.0);
+		Location loc = new Location(0.0f, -180.0f);
 		assertNotNull(loc);
 	}
 
@@ -98,7 +101,7 @@ public class Location_Test {
 	 */
 	@Test
 	public void ConstructorBoundaryTest4() {
-		Location loc = new Location(0.0, 180.0);
+		Location loc = new Location(0.0f, 180.0f);
 		assertNotNull(loc);
 	}
 
@@ -112,13 +115,13 @@ public class Location_Test {
 	 */
 	@Test()
 	public void ConstructorInvalidTest1() {
-		Location loc = Null;
+		Location loc = null;
 		try {
-			loc = new Location(-90.00001, 0.0);
+			loc = new Location(-90.00001f, 0.0f);
 			fail("Null_Object_Exception should have been thrown.");
 		} catch (Throwable e) {
 			assertTrue("Should have thrown a Null_Object_Exception",
-				e instanceof Null_Object_Exception);//IndexOutOfBoundsException
+				e instanceof Null_Object_Exception);
 		}
 		assertNull("Location should still be null", loc);
 	}
