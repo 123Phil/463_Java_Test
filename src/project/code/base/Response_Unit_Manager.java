@@ -1,19 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package project.code.base;
 
 import java.util.HashMap;
     
-/**
- *
- * @author Hugh
- * 
- * This class manages the collection of response units.
- * 
- * Exceptions Thrown:  None
- */
+
 public class Response_Unit_Manager {
     
     private static HashMap<String, Response_Unit> Response_Unit_DB =
