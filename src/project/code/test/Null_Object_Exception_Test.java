@@ -1,4 +1,4 @@
-package project.code.test;
+
 /* CPSC 463, Fall 2015 - Prof. Greenbaum
  * Team: Quality Assured
  * Members: Phillip Stewart, Timothy Ater, Kenneth Gunderson
@@ -104,8 +104,8 @@ public class Null_Object_Exception_Test {
 	@Test
 	public void NullObjectException_TwoFloats_Test() {
 		Float Latitude, Longitude;
-		Latitude = 1.23;
-		Longitude = 1.23;
+		Latitude = 1.23f;
+		Longitude = 1.23f;
 		assertThat(throw New Null_Object_Exception(Latitude,Longitude))
 			.isInstanceOf(Null_Object_Exception.class)
 			.hasMessage("Location " + "1.23" + ", " + "1.23" + "is not valid");
@@ -121,7 +121,7 @@ public class Null_Object_Exception_Test {
 	*/
 	@Test
 	public void NullObjectException_TwoIntegers_Test() {
-		Int Latitude, Longitude;
+		int Latitude, Longitude;
 		Latitude = 1;
 		Longitude = 1;
 		assertThat(throw New Null_Object_Exception(Latitude,Longitude))

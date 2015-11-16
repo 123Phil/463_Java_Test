@@ -1,4 +1,4 @@
-package project.code.test;
+
 /* CPSC 463, Fall 2015 - Prof. Greenbaum
  * Team: Quality Assured
  * Members: Phillip Stewart, Timothy Ater, Kenneth Gunderson
@@ -137,7 +137,7 @@ public class Null_Unit_ID_Exception_Test {
 	@Test
 	public void NullUnitIDException_Float_Test() {
 		float test;
-		test = 1.23;
+		test = 1.23f;
 		assertThat(throw New Null_Unit_ID_Exception(test))
 			.isInstanceOf(Null_Unit_ID_Exception.class)
 			.hasMessage("1.23");
