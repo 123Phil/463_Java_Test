@@ -36,6 +36,7 @@ package project.code.test;
  *    A valid Set_Unit_Location_Command object is instantiated with priority == 1
  */
 
+
 /* Test case J-02:
  *  Constructor, Normal conditions (string literal)
  *  Description:

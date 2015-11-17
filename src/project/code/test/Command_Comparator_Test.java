@@ -47,19 +47,20 @@ public class Command_Comparator_Test {
 		 assertNotNull("Comparator should have been instantiated.", comparer);
 	 }
 	
-	/* Test case L-02:
-	 *  Command_Comparator constructor test - abnormal conditions
-	 *  Description:
-	 *    Call the constructor with an argument (like a null String)
-	 *  Expected result:
-	 *    Compiler Error
-	 */
-	 @Test
-	 public void ConstructorAbnormalTest() {
-		 //TODO: this gives a compiler error... how to say we expect that??
-		 //Command_Comparator comparer = new Command_Comparator(null);
-		 //assertNotNull(comparer);
-	 }
+	 /* Compiler error */
+//	/* Test case L-02:
+//	 *  Command_Comparator constructor test - abnormal conditions
+//	 *  Description:
+//	 *    Call the constructor with an argument (like a null String)
+//	 *  Expected result:
+//	 *    Compiler Error
+//	 */
+//	 @Test
+//	 public void ConstructorAbnormalTest() {
+//		 //this gives a compiler error:
+//		 Command_Comparator comparer = new Command_Comparator(null);
+//		 assertNotNull(comparer);
+//	 }
 	
 	/* Test case L-03:
 	 *  Command.compare with equal priorities

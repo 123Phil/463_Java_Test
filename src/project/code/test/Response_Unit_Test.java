@@ -297,32 +297,34 @@ public class Response_Unit_Test {
 		assertTrue("Should have thrown a Null_Object_Exception", thrown);
 	}
 	
-	/* Test case E-13:
-	 *  Status_Type setter, invalid input
-	 *  Description:
-	 *    Create a valid object and call Set_Status_Type giving an integer value.
-	 *  Expected result:
-	 *    An Enum error should occur
-	 */
-	@Test
-	public void StatusIntTest() {
-		Response_Unit ru = null;
-		try {
-			ru = new Response_Unit("Unit 1", new Location(0.0f, 0.0f));
-		} catch (Throwable e) {
-			fail("Should not have thrown an exception.");
-		}
-		boolean thrown = false;
-		try {
-			//TODO: compiler error??
-			//ru.Set_Status(0);
-		} catch (Throwable e) {
-			assertTrue("Should have thrown a Null_Object_Exception",
-					e instanceof Null_Object_Exception);
-			thrown = true;
-		}
-		assertTrue("Should have thrown a Null_Object_Exception", thrown);
-	}
+	/* Tests which would not compile */
+	
+//	/* Test case E-13:
+//	 *  Status_Type setter, invalid input
+//	 *  Description:
+//	 *    Create a valid object and call Set_Status_Type giving an integer value.
+//	 *  Expected result:
+//	 *    An Enum error should occur
+//	 */
+//	@Test
+//	public void StatusIntTest() {
+//		Response_Unit ru = null;
+//		try {
+//			ru = new Response_Unit("Unit 1", new Location(0.0f, 0.0f));
+//		} catch (Throwable e) {
+//			fail("Should not have thrown an exception.");
+//		}
+//		boolean thrown = false;
+//		try {
+//			// compiler error:
+//			ru.Set_Status(0);
+//		} catch (Throwable e) {
+//			assertTrue("Should have thrown a Null_Object_Exception",
+//					e instanceof Null_Object_Exception);
+//			thrown = true;
+//		}
+//		assertTrue("Should have thrown a Null_Object_Exception", thrown);
+//	}
 	
 
 }

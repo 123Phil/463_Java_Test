@@ -9,6 +9,7 @@ package project.code.test;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import project.code.base.Duplicate_Item_Exception;
 import project.code.base.Null_Unit_ID_Exception;
  
 /* Unit under test:
@@ -32,8 +33,16 @@ public class Null_Unit_ID_Exception_Test {
 	*/
 	@Test
 	public void NullUnitIDException_NoArguments_Test() {
-		assertThat(throw New Null_Unit_ID_Exception())
-			.isInstanceOf(Null_Unit_ID_Exception.class);
+		boolean thrown = false;
+		try {
+			throw new Null_Unit_ID_Exception();
+		} catch (Throwable e) {
+			assertTrue("Should have thrown a Duplicate_Item_Exception",
+					e instanceof Null_Unit_ID_Exception);
+			assertEquals("Exception message does not match expected.", e.getMessage(), null);
+			thrown = true;
+		}
+		assertTrue("Exception should have been thrown.", thrown);
 	}
 
 	/* Test case C-02:
@@ -45,9 +54,16 @@ public class Null_Unit_ID_Exception_Test {
 	*/
 	@Test
 	public void NullUnitIDException_EmptyStringLiteral_Test() {
-		assertThat(throw New Null_Unit_ID_Exception(""))
-			.isInstanceOf(Null_Unit_ID_Exception.class)
-			.hasMessage("");
+		boolean thrown = false;
+		try {
+			throw new Null_Unit_ID_Exception("");
+		} catch (Throwable e) {
+			assertTrue("Should have thrown a Duplicate_Item_Exception",
+					e instanceof Null_Unit_ID_Exception);
+			assertEquals("Exception message does not match expected.", e.getMessage(), "");
+			thrown = true;
+		}
+		assertTrue("Exception should have been thrown.", thrown);
 	}
 
 	/* Test case C-03:
@@ -59,9 +75,16 @@ public class Null_Unit_ID_Exception_Test {
 	*/
 	@Test
 	public void NullUnitIDException_NonEmptyStringLiteral_Test() {
-		assertThat(throw New Null_Unit_ID_Exception("Test"))
-			.isInstanceOf(Null_Unit_ID_Exception.class)
-			.hasMessage("Test");
+		boolean thrown = false;
+		try {
+			throw new Null_Unit_ID_Exception("Test");
+		} catch (Throwable e) {
+			assertTrue("Should have thrown a Duplicate_Item_Exception",
+					e instanceof Null_Unit_ID_Exception);
+			assertEquals("Exception message does not match expected.", e.getMessage(), "Test");
+			thrown = true;
+		}
+		assertTrue("Exception should have been thrown.", thrown);
 	}
 
 	/* Test case C-04:
@@ -73,9 +96,16 @@ public class Null_Unit_ID_Exception_Test {
 	*/
 	@Test
 	public void NullUnitIDException_EmptyString_Test() {
-		assertThat(throw New Null_Unit_ID_Exception(new String("")))
-			.isInstanceOf(Null_Unit_ID_Exception.class)
-			.hasMessage("");
+		boolean thrown = false;
+		try {
+			throw new Null_Unit_ID_Exception(new String());
+		} catch (Throwable e) {
+			assertTrue("Should have thrown a Duplicate_Item_Exception",
+					e instanceof Null_Unit_ID_Exception);
+			assertEquals("Exception message does not match expected.", e.getMessage(), new String());
+			thrown = true;
+		}
+		assertTrue("Exception should have been thrown.", thrown);
 	}
 
 	/* Test case C-05:
@@ -87,77 +117,110 @@ public class Null_Unit_ID_Exception_Test {
 	*/
 	@Test
 	public void NullUnitIDException_NonEmptyString_Test() {
-		assertThat(throw New Null_Unit_ID_Exception(new String("Test")))
-			.isInstanceOf(Null_Unit_ID_Exception.class)
-			.hasMessage("Test");
+		boolean thrown = false;
+		try {
+			throw new Null_Unit_ID_Exception(new String("Test"));
+		} catch (Throwable e) {
+			assertTrue("Should have thrown a Duplicate_Item_Exception",
+					e instanceof Null_Unit_ID_Exception);
+			assertEquals("Exception message does not match expected.", e.getMessage(), new String("Test"));
+			thrown = true;
+		}
+		assertTrue("Exception should have been thrown.", thrown);
 	}
 
-	/* Test case C-06:
-	*  Null_Unit_ID_Exception construction with an int
-	*  Description:
-	*    Throw a new Null_Unit_ID_Exception given an int
-	*  Expected result:
-	*    No Null_Unit_ID_Exception exception should be thrown.
-	*    -Some error should occur
-	*/
-	@Test
-	public void NullUnitIDException_Int_Test() {
-		int test;
-		test = 1;
-		assertThat(throw New Null_Unit_ID_Exception(test))
-			.isInstanceOf(Null_Unit_ID_Exception.class)
-			.hasMessage("1");
-	}
-
-	/* Test case C-07:
-	*  Null_Unit_ID_Exception construction with negative int
-	*  Description:
-	*    Throw a new Null_Unit_ID_Exception given negative int
-	*  Expected result:
-	*    No Null_Unit_ID_Exception exception should be thrown.
-	*    -Some error should occur
-	*/
-	@Test
-	public void NullUnitIDException_NegativeInt_Test() {
-		int test;
-		test = -1;
-		assertThat(throw New Null_Unit_ID_Exception(test))
-			.isInstanceOf(Null_Unit_ID_Exception.class)
-			.hasMessage("-1");
-	}
-
-	/* Test case C-08:
-	*  Null_Unit_ID_Exception construction with float
-	*  Description:
-	*    Test with a float msg
-	*  Expected result:
-	*    No Null_Unit_ID_Exception exception should be thrown.
-	*    -Some error should occur
-	*/
-	@Test
-	public void NullUnitIDException_Float_Test() {
-		float test;
-		test = 1.23f;
-		assertThat(throw New Null_Unit_ID_Exception(test))
-			.isInstanceOf(Null_Unit_ID_Exception.class)
-			.hasMessage("1.23");
-	}
-
-	/* Test case C-09:
-	*  Null_Unit_ID_Exception construction with Null Integer object
-	*  Description:
-	*    Throw Null_Unit_ID_Exception with a Null Integer argument
-	*  Expected result:
-	*    No Null_Unit_ID_Exception exception should be thrown.
-	*    -Some error should occur
-	*/
-	@Test
-	public void NullUnitIDException_NullInteger_Test() {
-		Integer test;
-		test = null;
-		assertThat(throw New Null_Unit_ID_Exception(test))
-			.isInstanceOf(Null_Unit_ID_Exception.class);
-	}
- } //end public class
+	
+	/* Compiler errors */
+//	/* Test case C-06:
+//	*  Null_Unit_ID_Exception construction with an int
+//	*  Description:
+//	*    Throw a new Null_Unit_ID_Exception given an int
+//	*  Expected result:
+//	*    No Null_Unit_ID_Exception exception should be thrown.
+//	*    -Some error should occur
+//	*/
+//	@Test
+//	public void NullUnitIDException_Int_Test() {
+//		boolean thrown = false;
+//		try {
+//			int test_val = 5;
+//			throw new Null_Unit_ID_Exception(test_val);
+//		} catch (Throwable e) {
+//			assertTrue("Should have thrown a Duplicate_Item_Exception",
+//					e instanceof Null_Unit_ID_Exception);
+//			assertEquals("Exception message does not match expected.", e.getMessage(), "5");
+//			thrown = true;
+//		}
+//		assertTrue("Exception should have been thrown.", thrown);
+//	}
+//
+//	/* Test case C-07:
+//	*  Null_Unit_ID_Exception construction with negative int
+//	*  Description:
+//	*    Throw a new Null_Unit_ID_Exception given negative int
+//	*  Expected result:
+//	*    No Null_Unit_ID_Exception exception should be thrown.
+//	*    -Some error should occur
+//	*/
+//	@Test
+//	public void NullUnitIDException_NegativeInt_Test() {
+//		boolean thrown = false;
+//		try {
+//			throw new Null_Unit_ID_Exception(-5);
+//		} catch (Throwable e) {
+//			assertTrue("Should have thrown a Duplicate_Item_Exception",
+//					e instanceof Null_Unit_ID_Exception);
+//			assertEquals("Exception message does not match expected.", e.getMessage(), -5);
+//			thrown = true;
+//		}
+//		assertTrue("Exception should have been thrown.", thrown);
+//	}
+//
+//	/* Test case C-08:
+//	*  Null_Unit_ID_Exception construction with float
+//	*  Description:
+//	*    Test with a float msg
+//	*  Expected result:
+//	*    No Null_Unit_ID_Exception exception should be thrown.
+//	*    -Some error should occur
+//	*/
+//	@Test
+//	public void NullUnitIDException_Float_Test() {
+//		boolean thrown = false;
+//		try {
+//			throw new Null_Unit_ID_Exception(-5.0f);
+//		} catch (Throwable e) {
+//			assertTrue("Should have thrown a Duplicate_Item_Exception",
+//					e instanceof Null_Unit_ID_Exception);
+//			assertEquals("Exception message does not match expected.", e.getMessage(), "-5.0");
+//			thrown = true;
+//		}
+//		assertTrue("Exception should have been thrown.", thrown);
+//	}
+//
+//	/* Test case C-09:
+//	*  Null_Unit_ID_Exception construction with Null Integer object
+//	*  Description:
+//	*    Throw Null_Unit_ID_Exception with a Null Integer argument
+//	*  Expected result:
+//	*    No Null_Unit_ID_Exception exception should be thrown.
+//	*    -Some error should occur
+//	*/
+//	@Test
+//	public void NullUnitIDException_NullInteger_Test() {
+//		Integer test_val = null;
+//		boolean thrown = false;
+//		try {
+//			throw new Null_Unit_ID_Exception(test_val);
+//		} catch (Throwable e) {
+//			assertTrue("Should have thrown a Duplicate_Item_Exception",
+//					e instanceof Null_Unit_ID_Exception);
+//			assertEquals("Exception message does not match expected.", e.getMessage(), -5);
+//			thrown = true;
+//		}
+//		assertTrue("Exception should have been thrown.", thrown);
+//	}
+	
+ } //end class
 
 

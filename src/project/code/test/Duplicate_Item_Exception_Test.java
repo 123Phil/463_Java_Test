@@ -34,12 +34,16 @@ import project.code.base.Null_Object_Exception;
 	*/
 	@Test
 	public void DuplicateItemException_NoArguments_Test() {
+		boolean thrown = false;
 		try {
 			throw new Duplicate_Item_Exception();
 		} catch (Throwable e) {
 			assertTrue("Should have thrown a Duplicate_Item_Exception",
 					e instanceof Duplicate_Item_Exception);
+			assertEquals("Exception message does not match expected.", e.getMessage(), null);
+			thrown = true;
 		}
+		assertTrue("Exception should have been thrown.", thrown);
 	}
 
 	/* Test case A-02:
@@ -51,9 +55,16 @@ import project.code.base.Null_Object_Exception;
 	*/
 	@Test
 	public void DuplicateItemException_EmptyStringLiteral_Test() {
-		assertThat(throw New Duplicate_Item_Exception(""))
-			.isInstanceOf(Duplicate_Item_Exception.class)
-			.hasMessage("");
+		boolean thrown = false;
+		try {
+			throw new Duplicate_Item_Exception("");
+		} catch (Throwable e) {
+			assertTrue("Should have thrown a Duplicate_Item_Exception",
+					e instanceof Duplicate_Item_Exception);
+			assertEquals("Exception message does not match expected.", e.getMessage(), "");
+			thrown = true;
+		}
+		assertTrue("Exception should have been thrown.", thrown);
 	}
 
 	/* Test case A-03:
@@ -65,9 +76,16 @@ import project.code.base.Null_Object_Exception;
 	*/
 	@Test
 	public void DuplicateItemException_NonEmptyStringLiteral_Test() {
-		assertThat(throw New Duplicate_Item_Exception("Test"))
-			.isInstanceOf(Duplicate_Item_Exception.class)
-			.hasMessage("Test");
+		boolean thrown = false;
+		try {
+			throw new Duplicate_Item_Exception("Test");
+		} catch (Throwable e) {
+			assertTrue("Should have thrown a Duplicate_Item_Exception",
+					e instanceof Duplicate_Item_Exception);
+			assertEquals("Exception message does not match expected.", e.getMessage(), "Test");
+			thrown = true;
+		}
+		assertTrue("Exception should have been thrown.", thrown);
 	}
 
 	/* Test case A-04:
@@ -79,9 +97,16 @@ import project.code.base.Null_Object_Exception;
 	*/
 	@Test
 	public void DuplicateItemException_EmptyString_Test() {
-		assertThat(throw New Duplicate_Item_Exception(new String("")))
-			.isInstanceOf(Duplicate_Item_Exception.class)
-			.hasMessage("");
+		boolean thrown = false;
+		try {
+			throw new Duplicate_Item_Exception(new String());
+		} catch (Throwable e) {
+			assertTrue("Should have thrown a Duplicate_Item_Exception",
+					e instanceof Duplicate_Item_Exception);
+			assertEquals("Exception message does not match expected.", e.getMessage(), new String());
+			thrown = true;
+		}
+		assertTrue("Exception should have been thrown.", thrown);
 	}
 
 	/* Test case A-05:
@@ -93,8 +118,15 @@ import project.code.base.Null_Object_Exception;
 	*/
 	@Test
 	public void DuplicateItemException_NonEmptyString_Test() {
-		assertThat(throw New Duplicate_Item_Exception(new String("Test")))
-			.isInstanceOf(Duplicate_Item_Exception.class)
-			.hasMessage("Test");
+		boolean thrown = false;
+		try {
+			throw new Duplicate_Item_Exception(new String("Test"));
+		} catch (Throwable e) {
+			assertTrue("Should have thrown a Duplicate_Item_Exception",
+					e instanceof Duplicate_Item_Exception);
+			assertEquals("Exception message does not match expected.", e.getMessage(), new String("Test"));
+			thrown = true;
+		}
+		assertTrue("Exception should have been thrown.", thrown);
 	}
  } //end public class
