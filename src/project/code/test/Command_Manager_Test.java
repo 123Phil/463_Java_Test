@@ -521,7 +521,11 @@ public class Command_Manager_Test {
 			threads.get(i).start();
 		}
 		while (count < 10000) {
-			command = comm_mgr.Next_Command();
+			try {
+				command = comm_mgr.Next_Command();
+			} catch (Throwable e) {
+				fail("Error in Next_Command with threading.");
+			}
 			if (command != null) {
 				count++;
 				command = null;

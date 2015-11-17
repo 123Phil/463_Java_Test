@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import project.code.base.Duplicate_Item_Exception;
+import project.code.base.Null_Object_Exception;
 
 /* Unit under test:
  *   Duplicate_Item_Exception.java
@@ -33,8 +34,12 @@ import project.code.base.Duplicate_Item_Exception;
 	*/
 	@Test
 	public void DuplicateItemException_NoArguments_Test() {
-		assertThat(throw New Duplicate_Item_Exception())
-			.isInstanceOf(Duplicate_Item_Exception.class);
+		try {
+			throw new Duplicate_Item_Exception();
+		} catch (Throwable e) {
+			assertTrue("Should have thrown a Duplicate_Item_Exception",
+					e instanceof Duplicate_Item_Exception);
+		}
 	}
 
 	/* Test case A-02:

@@ -126,6 +126,8 @@ public class Response_Unit_Manager_Test {
 			thrown = true;
 		} catch (Duplicate_Item_Exception e) {
 			fail("Response unit addition failed.");
+		} catch (Throwable e) {
+			fail("Unexpected exception thrown. Should have been Null_Object_Exception");
 		}
 		assertTrue("Null_Object_Exception should have been thrown.", thrown);
 	}

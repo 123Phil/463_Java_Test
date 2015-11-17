@@ -42,13 +42,16 @@ public class EnqueueThread extends Thread {
 					i = this.num_to_enqeue;
 					break;
 			}
-			comm_mgr.Enqueue_Command(command);
-		}
-		
-		
+			/* This may break during the execution of a test.
+			 * However, checking that failure here is not plausible.
+			 * So the number and type of enqueued commands should be checked
+			 * by the test that creates these threads.*/
+			//try {
+				comm_mgr.Enqueue_Command(command);
+			//} catch (Throwable e) {
+			//	fail("Error enqueueing command");
+			//}
+		}	
     }
-
-    //(new HelloThread()).start();
-
 }
 
