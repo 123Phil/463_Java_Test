@@ -196,7 +196,7 @@ public class Toggle_Emergency_Command_Test {
 	 *    Emergency_Exists should toggle on the named unit.
 	 */
 	@Test
-	public void Constructor_Execute_Test() {
+	public void Execute_Test() {
 		Response_Unit ru = AddResponseUnit("Unit 4", null);
 		assertFalse(ru.Emergency_Exists());
 		Command command = new Toggle_Emergency_Command("Unit 4");
@@ -217,7 +217,7 @@ public class Toggle_Emergency_Command_Test {
 	 *    Null_Unit_ID_Exception
 	 */
 	@Test
-	public void Constructor_ExecuteResponseUnitNotPresent_Test() {
+	public void ExecuteResponseUnitNotPresent_Test() {
 		boolean thrown = false;
 		Command command = new Toggle_Emergency_Command("Unit 5");
 		try {
@@ -241,7 +241,7 @@ public class Toggle_Emergency_Command_Test {
 	 *    Priority should update normally
 	 */
 	@Test
-	public void Constructor_PriorityAccessors_Test() {
+	public void PriorityAccessors_Test() {
 		AddResponseUnit("Unit 6", null);
 		Command command = new Toggle_Emergency_Command("Unit 6");
 		assertEquals("Should be priority 1.", command.Priority(), 1);
@@ -258,7 +258,7 @@ public class Toggle_Emergency_Command_Test {
 	 *    Null_Unit_ID_Exception
 	 */
 	@Test
-	public void Constructor_SetPriorityToNull_Test() {
+	public void SetPriorityToNull_Test() {
 		AddResponseUnit("Unit 7", null);
 		boolean thrown = false;
 		Command command = new Toggle_Emergency_Command("Unit 7");
@@ -281,7 +281,7 @@ public class Toggle_Emergency_Command_Test {
 	 *    Null_Unit_ID_Exception
 	 */
 	@Test
-	public void Constructor_SetPriorityToInvalid_Test() {
+	public void SetPriorityToInvalid_Test() {
 		AddResponseUnit("Unit 8", null);
 		boolean thrown = false;
 		Command command = new Toggle_Emergency_Command("Unit 8");
@@ -307,7 +307,7 @@ public class Toggle_Emergency_Command_Test {
 	 *    Unit_ID should update normally
 	 */
 	@Test
-	public void Constructor_UnitIDSet_Test() {
+	public void UnitIDSet_Test() {
 		AddResponseUnit("Unit 9", null);
 		Command command = new Toggle_Emergency_Command("Unit 9");
 		assertEquals("Should be Unit 9.", command.Unit_ID(), "Unit 9");
@@ -324,7 +324,7 @@ public class Toggle_Emergency_Command_Test {
 	 *    Null_Unit_ID_Exception
 	 */
 	@Test
-	public void Constructor_SetUnitIDToNull_Test() {
+	public void SetUnitIDToNull_Test() {
 		AddResponseUnit("Unit 10", null);
 		boolean thrown = false;
 		Command command = new Toggle_Emergency_Command("Unit 10");
@@ -347,7 +347,7 @@ public class Toggle_Emergency_Command_Test {
 	 *    Null_Unit_ID_Exception
 	 */
 	@Test
-	public void Constructor_SetUnitIDToEmptyString_Test() {
+	public void SetUnitIDToEmptyString_Test() {
 		AddResponseUnit("Unit 11", null);
 		boolean thrown = false;
 		Command command = new Toggle_Emergency_Command("Unit 11");
@@ -370,7 +370,7 @@ public class Toggle_Emergency_Command_Test {
 	 *    Null_Unit_ID_Exception
 	 */
 	@Test
-	public void Constructor_SetUnitIDToEmptyStringLiteral_Test() {
+	public void SetUnitIDToEmptyStringLiteral_Test() {
 		AddResponseUnit("Unit 12", null);
 		boolean thrown = false;
 		Command command = new Toggle_Emergency_Command("Unit 12");
@@ -394,7 +394,7 @@ public class Toggle_Emergency_Command_Test {
 	 *    Null_Unit_ID_Exception
 	 */
 	@Test
-	public void Constructor_SetUnitIDToNonPresentUnit_Test() {
+	public void SetUnitIDToNonPresentUnit_Test() {
 		AddResponseUnit("Unit 13", null);
 		boolean thrown = false;
 		Command command = new Toggle_Emergency_Command("Unit 13");

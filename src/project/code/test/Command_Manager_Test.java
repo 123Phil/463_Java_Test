@@ -332,7 +332,7 @@ public class Command_Manager_Test {
 		//Response_Unit_Manager rum = new Response_Unit_Manager();
 		Command_Manager comm_mgr = new Command_Manager();
 		AddResponseUnit("Unit 10", null);
-		Command command = new Send_Message_To_Operator_Command("Unit 10", "Example message");
+		Command command = new Send_Message_To_Operator_Command("Unit 10", "Example message from test (M-11)");
 		comm_mgr.Enqueue_Command(command);
 		try {
 			comm_mgr.Execute_Next_Command();
@@ -340,7 +340,7 @@ public class Command_Manager_Test {
 			fail("Execute_Next_Command failed with valid command.");
 		}
 		//Check the console/stdout for the following:
-		//  "Message from Unit 10reads Example message"
+		//  "Message from Unit 10reads Example message from test (M-11)"
 		//TODO : how to automate in test??
 	}
 	

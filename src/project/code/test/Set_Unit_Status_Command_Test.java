@@ -7,7 +7,6 @@ package project.code.test;
 
 
 import static org.junit.Assert.*;
-import java.util.ArrayList;
 import org.junit.Test;
 
 import project.code.base.*;
@@ -244,7 +243,7 @@ public class Set_Unit_Status_Command_Test {
 	 *    Priority should update normally
 	 */
     @Test
-    public void Constructor_PriorityAccessors_Test() {
+    public void PriorityAccessors_Test() {
         AddResponseUnit("Unit 6", null);
         Command command = new Set_Unit_Status_Command("Unit 6", Status_Type.Enroute);
         assertEquals("Should be priority 1.", command.Priority(), 1);
@@ -261,7 +260,7 @@ public class Set_Unit_Status_Command_Test {
 	 *    Null_Object_Exception
 	 */
     @Test
-    public void Constructor_SetPriorityToNull_Test() {
+    public void SetPriorityToNull_Test() {
         AddResponseUnit("Unit 7", null);
         boolean thrown = false;
         Command command = new Set_Unit_Status_Command("Unit 7", Status_Type.Enroute);
@@ -284,7 +283,7 @@ public class Set_Unit_Status_Command_Test {
 	 *    Null_Unit_ID_Exception
 	 */
     @Test
-    public void Constructor_SetPriorityToInvalid_Test() {
+    public void SetPriorityToInvalid_Test() {
         AddResponseUnit("Unit 8", null);
         boolean thrown = false;
         Command command = new Set_Unit_Status_Command("Unit 8", Status_Type.Enroute);
@@ -309,7 +308,7 @@ public class Set_Unit_Status_Command_Test {
 	 *    Unit_ID should update normally
 	 */
     @Test
-    public void Constructor_UnitIDSet_Test() {
+    public void UnitIDSet_Test() {
         AddResponseUnit("Unit 9", null);
         Command command = new Set_Unit_Status_Command("Unit 9", Status_Type.Enroute);
         assertEquals("Should be Unit 9.", command.Unit_ID(), "Unit 9");
@@ -326,7 +325,7 @@ public class Set_Unit_Status_Command_Test {
 	 *    Null_Unit_ID_Exception
 	 */
     @Test
-    public void Constructor_SetUnitIDToNull_Test() {
+    public void SetUnitIDToNull_Test() {
         AddResponseUnit("Unit 10", null);
         boolean thrown = false;
         Command command = new Set_Unit_Status_Command("Unit 10", Status_Type.Enroute);
@@ -349,7 +348,7 @@ public class Set_Unit_Status_Command_Test {
 	 *    Null_Unit_ID_Exception
 	 */
     @Test
-    public void Constructor_SetUnitIDToEmptyString_Test() {
+    public void SetUnitIDToEmptyString_Test() {
         AddResponseUnit("Unit 11", null);
         boolean thrown = false;
         Command command = new Set_Unit_Status_Command("Unit 11", Status_Type.Enroute);
@@ -372,7 +371,7 @@ public class Set_Unit_Status_Command_Test {
 	 *    Null_Unit_ID_Exception
 	 */
     @Test
-    public void Constructor_SetUnitIDToEmptyStringLiteral_Test() {
+    public void SetUnitIDToEmptyStringLiteral_Test() {
         AddResponseUnit("Unit 12", null);
         boolean thrown = false;
         Command command = new Set_Unit_Status_Command("Unit 12", Status_Type.Enroute);

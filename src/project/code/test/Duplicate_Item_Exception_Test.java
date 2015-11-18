@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import project.code.base.Duplicate_Item_Exception;
-import project.code.base.Null_Object_Exception;
+//import project.code.base.Null_Object_Exception;
 
 /* Unit under test:
  *   Duplicate_Item_Exception.java

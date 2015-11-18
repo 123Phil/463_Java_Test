@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import org.junit.Test;
 
 import project.code.base.*;
-import project.code.base.Response_Unit.Status_Type;
+//import project.code.base.Response_Unit.Status_Type;
 
 
 /* Unit under test:
@@ -329,6 +329,7 @@ public class Response_Unit_Manager_Test {
 					e instanceof Null_Unit_ID_Exception);
 			thrown = true;
 		}
+		assertFalse("Response_Unit_Exists should not return true.", exists);
 		assertTrue("Null_Unit_ID_Exception should have been thrown.", thrown);
 	}
 	
@@ -351,6 +352,7 @@ public class Response_Unit_Manager_Test {
 					e instanceof Null_Unit_ID_Exception);
 			thrown = true;
 		}
+		assertFalse("Response_Unit_Exists should not return true.", exists);
 		assertTrue("Null_Unit_ID_Exception should have been thrown.", thrown);
 	}
 	
@@ -372,6 +374,7 @@ public class Response_Unit_Manager_Test {
 					e instanceof Null_Unit_ID_Exception);
 			thrown = true;
 		}
+		assertFalse("Response_Unit_Exists should not return true.", exists);
 		assertTrue("Null_Unit_ID_Exception should have been thrown.", thrown);
 	}
 

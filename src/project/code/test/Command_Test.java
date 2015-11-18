@@ -5,11 +5,9 @@ package project.code.test;
  * Last date modified: 16 Nov 2015
  */
 
-import static org.junit.Assert.assertNotNull;
-
-import org.junit.Test;
-
-import project.code.base.*;
+//import static org.junit.Assert.assertNotNull;
+//import org.junit.Test;
+//import project.code.base.*;
 
 /* Unit under test:
  *   Command.java
