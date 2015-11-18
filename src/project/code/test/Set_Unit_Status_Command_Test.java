@@ -243,6 +243,14 @@ public class Set_Unit_Status_Command_Test {
 	 *  Expected result:
 	 *    Priority should update normally
 	 */
+    @Test
+    public void Constructor_PriorityAccessors_Test() {
+        AddResponseUnit("Unit 6", null);
+        Command command = new Set_Unit_Status_Command("Unit 6", Status_Type.Enroute);
+        assertEquals("Should be priority 1.", command.Priority(), 1);
+        command.Set_Priority(2);
+        assertEquals("Should be priority 2.", command.Priority(), 2);
+    }
 
 	/* Test case I-10:
 	 *  Priority accessors, null value
@@ -252,6 +260,20 @@ public class Set_Unit_Status_Command_Test {
 	 *  Expected result:
 	 *    Null_Object_Exception
 	 */
+    @Test
+    public void Constructor_SetPriorityToNull_Test() {
+        AddResponseUnit("Unit 7", null);
+        boolean thrown = false;
+        Command command = new Set_Unit_Status_Command("Unit 7", Status_Type.Enroute);
+        try {
+            command.Set_Priority(null);
+        } catch (Throwable e) {
+            assertTrue("Should have thrown a Null_Unit_ID_Exception",
+                       e instanceof Null_Unit_ID_Exception);
+            thrown = true;
+        }
+        assertTrue("Exception should have been thrown.", thrown);
+    }
 
 	/* Test case I-11:
 	 *  Priority accessors, invalid value
@@ -261,6 +283,20 @@ public class Set_Unit_Status_Command_Test {
 	 *  Expected result:
 	 *    Null_Unit_ID_Exception
 	 */
+    @Test
+    public void Constructor_SetPriorityToInvalid_Test() {
+        AddResponseUnit("Unit 8", null);
+        boolean thrown = false;
+        Command command = new Set_Unit_Status_Command("Unit 8", Status_Type.Enroute);
+        try {
+            command.Set_Priority(-1);
+        } catch (Throwable e) {
+            assertTrue("Should have thrown a Null_Unit_ID_Exception",
+                       e instanceof Null_Unit_ID_Exception);
+            thrown = true;
+        }
+        assertTrue("Exception should have been thrown.", thrown);
+    }
 
 	/* Test case I-12:
 	 *  Unit_ID accessors, normal path
@@ -272,6 +308,14 @@ public class Set_Unit_Status_Command_Test {
 	 *  Expected result:
 	 *    Unit_ID should update normally
 	 */
+    @Test
+    public void Constructor_UnitIDSet_Test() {
+        AddResponseUnit("Unit 9", null);
+        Command command = new Set_Unit_Status_Command("Unit 9", Status_Type.Enroute);
+        assertEquals("Should be Unit 9.", command.Unit_ID(), "Unit 9");
+        command.Set_Unit_ID("Unit 99");
+        assertEquals("Unit_ID should have updated to 'Unit 99'.", command.Unit_ID(), "Unit 99");
+    }
 
 	/* Test case I-13:
 	 *  Unit_ID accessors, null value
@@ -281,6 +325,20 @@ public class Set_Unit_Status_Command_Test {
 	 *  Expected result:
 	 *    Null_Unit_ID_Exception
 	 */
+    @Test
+    public void Constructor_SetUnitIDToNull_Test() {
+        AddResponseUnit("Unit 10", null);
+        boolean thrown = false;
+        Command command = new Set_Unit_Status_Command("Unit 10", Status_Type.Enroute);
+        try {
+            command.Set_Unit_ID(null);
+        } catch (Throwable e) {
+            assertTrue("Should have thrown a Null_Unit_ID_Exception",
+                       e instanceof Null_Unit_ID_Exception);
+            thrown = true;
+        }
+        assertTrue("Exception should have been thrown.", thrown);
+    }
 
 	/* Test case I-14:
 	 *  Unit_ID accessors, empty String
@@ -290,6 +348,20 @@ public class Set_Unit_Status_Command_Test {
 	 *  Expected result:
 	 *    Null_Unit_ID_Exception
 	 */
+    @Test
+    public void Constructor_SetUnitIDToEmptyString_Test() {
+        AddResponseUnit("Unit 11", null);
+        boolean thrown = false;
+        Command command = new Set_Unit_Status_Command("Unit 11", Status_Type.Enroute);
+        try {
+            command.Set_Unit_ID(new String());
+        } catch (Throwable e) {
+            assertTrue("Should have thrown a Null_Unit_ID_Exception",
+                       e instanceof Null_Unit_ID_Exception);
+            thrown = true;
+        }
+        assertTrue("Exception should have been thrown.", thrown);
+    }
 
 	/* Test case I-15:
 	 *  Unit_ID accessors, empty string literal
@@ -299,5 +371,19 @@ public class Set_Unit_Status_Command_Test {
 	 *  Expected result:
 	 *    Null_Unit_ID_Exception
 	 */
+    @Test
+    public void Constructor_SetUnitIDToEmptyStringLiteral_Test() {
+        AddResponseUnit("Unit 12", null);
+        boolean thrown = false;
+        Command command = new Set_Unit_Status_Command("Unit 12", Status_Type.Enroute);
+        try {
+            command.Set_Unit_ID("");
+        } catch (Throwable e) {
+            assertTrue("Should have thrown a Null_Unit_ID_Exception",
+                       e instanceof Null_Unit_ID_Exception);
+            thrown = true;
+        }
+        assertTrue("Exception should have been thrown.", thrown);
+    }
 
 } //end class
